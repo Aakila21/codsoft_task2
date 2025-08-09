@@ -1,0 +1,236 @@
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  background-color:#ffccdd;
+  color: #3a3a3a;
+}
+
+/* Header */
+#header {
+  display :flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background:  #f8d4e4;
+}
+
+/*logo*/
+
+#logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+#navbar {
+    display :flex;
+  }
+
+
+#navbar a {
+  margin-left: 40px;
+  text-decoration: none;
+  color:#3a3a3a;
+  background: linear-gradient(to right, #f8bbd0, #f48fb1); 
+  font-weight: 600;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+
+#navbar a:hover
+{
+  color: #e91e63; 
+  transform: scale(1.1); 
+  text-shadow: 0 0 5px #f8bbd0; 
+}
+
+/* Hero Section */
+#hero {
+  text-align: center;
+  padding: 80px 20px 40px;
+  background: url('backg1.gif') center/cover no-repeat;
+  color: #fff0f5;
+  position: relative;
+}
+
+#hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 0;
+}
+
+#hero-description {
+  font-family: 'Lato', sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto 30px; 
+  color: #f8f4f1;
+  opacity: 0.95;
+}
+
+
+
+#hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+#hero-title {
+  font-size: 36px;
+  margin-bottom: 20px;
+  font-family: 'Playfair Display', serif;
+}
+
+#search-bar input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 30px;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+#cta-btn {
+  background: #e91e63;
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  margin-top: 20px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+#cta-btn:hover {
+  background: #d81b60;
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #ffccc7;
+}
+
+/* Product Categories */
+#categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 80px 100px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  width: 200px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+   position: relative; 
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.card:hover img {
+  transform: scale(1.1);
+}
+
+.card h3 {
+  text-align: center;
+  padding: 10px 0;
+  font-family: 'Playfair Display', serif;
+}
+
+.card-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  text-decoration: none;
+}
+
+/* Testimonials */
+#testimonials {
+  background: #fef2ef;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.testimonial {
+  margin-bottom: 20px;
+  max-width: 400px;
+  margin: 0 auto 30px;
+}
+
+.testimonial img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+/* Footer */
+#footer {
+  background: #f2b6ad;
+  text-align: center;
+  padding: 30px 20px 10px;
+}
+
+#footer-links {
+  margin-bottom: 10px;
+}
+
+#footer-links a {
+  margin: 0 15px;
+  color: #3a3a3a;
+  text-decoration: none;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  #categories {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card 
+  {
+    width: 90%;
+    max-width: 300px;
+  }
+
+  #footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* Accessibility improvements */
+a, button, input {
+  font-size: 16px;
+  color: #3a3a3a;
+}
